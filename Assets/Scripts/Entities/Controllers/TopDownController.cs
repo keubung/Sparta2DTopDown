@@ -13,6 +13,14 @@ public class TopDownController : MonoBehaviour
 
     private float timeSinceLastAttack = float.MaxValue;
 
+    // protected 프로퍼티를 한 이유 : 나만 바꾸고 싶지만 가져가는 건 내 상속받는 클래스들도 볼 수 있게!
+    protected CharacterStatsHandler stats {  get; private set; }
+
+    protected virtual void Awake()
+    {
+        stats = GetComponent<CharacterStatsHandler>();
+    }
+
     private void Update()
     {
         HandleAttackDelay();
@@ -20,12 +28,11 @@ public class TopDownController : MonoBehaviour
 
     private void HandleAttackDelay()
     {
-        // TODO :: MAGIC NUMBER 수정
-        if(timeSinceLastAttack < 0.2f)
+        if(timeSinceLastAttack < stats.CurrentStat.attackSO.delay)
         {
             timeSinceLastAttack += Time.deltaTime;
         }
-        else if(IsAttacking && timeSinceLastAttack >= 0.2f)
+        else if(IsAttacking && timeSinceLastAttack >= stats.CurrentStat.attackSO.delay)
         {
             timeSinceLastAttack = 0f;
             CallAttackEvent();
