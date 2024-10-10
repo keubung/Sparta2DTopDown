@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80094704}
   - component: {fileID: 80094705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 146827372}
   - component: {fileID: 146827374}
   - component: {fileID: 146827373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackDeco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 440276325}
   - component: {fileID: 440276327}
   - component: {fileID: 440276326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontDeco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 477698387}
   - component: {fileID: 477698386}
   - component: {fileID: 477698388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 623473079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1807,7 +1807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 997951995}
   - component: {fileID: 997951996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1893,7 +1893,7 @@ GameObject:
   - component: {fileID: 1115822341}
   - component: {fileID: 1115822343}
   - component: {fileID: 1115822342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3712,7 +3712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1707695222}
   - component: {fileID: 1707695221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3759,7 +3759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998795793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3798,7 +3798,7 @@ GameObject:
   - component: {fileID: 2126948556}
   - component: {fileID: 2126948557}
   - component: {fileID: 2126948558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

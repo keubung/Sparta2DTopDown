@@ -7,6 +7,7 @@ public class RangedAttackSO : AttackSO
     public string bulletNameTag;
     public float duration;
     public float spread;
+    public float multipleProjectilesAngle;
     public int numberofProjectilesPerShot;
     public int numberOfProjectilesAngle;
     public Color projectileColor;
