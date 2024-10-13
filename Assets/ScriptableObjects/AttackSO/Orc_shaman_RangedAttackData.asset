@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e1eb593b1f8e6343bc010a1bb2444aa, type: 3}
-  m_Name: PlayerDefaultAttackSO
+  m_Name: Orc_shaman_RangedAttackData
   m_EditorClassIdentifier: 
-  size: 1
-  delay: 0.15
-  power: 2
+  size: 0.5
+  delay: 1
+  power: 1
   speed: 10
   target:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   isOnKnockBack: 1
   knockbackPower: 5
   knockbackTime: 0.1
   bulletNameTag: Arrow
   duration: 5
-  spread: 4
+  spread: 8
   multipleProjectilesAngle: 0
   numberofProjectilesPerShot: 1
   numberOfProjectilesAngle: 7
-  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileColor: {r: 0.9921569, g: 0.3019608, b: 0.32156864, a: 1}

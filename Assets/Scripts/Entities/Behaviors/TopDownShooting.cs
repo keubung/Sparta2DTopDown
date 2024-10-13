@@ -10,8 +10,6 @@ public class TopDownShooting : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPosition;
     private Vector2 aimDirection = Vector2.right;
 
-    public GameObject TestPrefab;
-
     private void Awake()
     {
         controller = GetComponent<TopDownController>();
@@ -49,7 +47,7 @@ public class TopDownShooting : MonoBehaviour
 
     private void CreateProjectile(RangedAttackSO rangedAttackSO, float angle)
     {
-        GameObject obj = Instantiate(TestPrefab);
+        GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool(rangedAttackSO.bulletNameTag);
         obj.transform.position = projectileSpawnPosition.position;
         ProjectileController attackController = obj.GetComponent<ProjectileController>();
         attackController.InitializeAttack(RotateVector2(aimDirection, angle), rangedAttackSO);

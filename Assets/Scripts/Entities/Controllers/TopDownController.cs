@@ -28,11 +28,11 @@ public class TopDownController : MonoBehaviour
 
     private void HandleAttackDelay()
     {
-        if(timeSinceLastAttack < stats.CurrentStat.attackSO.delay)
+        if(timeSinceLastAttack <= stats.CurrentStat.attackSO.delay)
         {
             timeSinceLastAttack += Time.deltaTime;
         }
-        else if(IsAttacking && timeSinceLastAttack >= stats.CurrentStat.attackSO.delay)
+        else if(IsAttacking && timeSinceLastAttack > stats.CurrentStat.attackSO.delay)
         {
             timeSinceLastAttack = 0f;
             CallAttackEvent(stats.CurrentStat.attackSO);

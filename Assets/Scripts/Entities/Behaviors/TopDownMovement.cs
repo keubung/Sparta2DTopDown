@@ -11,6 +11,8 @@ public class TopDownMovement : MonoBehaviour
     private CharacterStatsHandler characterStatsHandler;
 
     private Vector2 movementDirection = Vector2.zero;
+    private Vector2 knockback = Vector2.zero;
+    private float knockbackDuration = 0.0f;
 
     private void Awake()    // 주로 내 컴포넌트 안에서 끝나는 것, 보통 다른 컴프넌트의 값을 변경하지 않음.
     {
@@ -36,11 +38,28 @@ public class TopDownMovement : MonoBehaviour
         // rigidbody의 값을 바꾸니까 FixedUpdate에서 한다.
         //
         ApplyMovement(movementDirection);
+
+        if(knockbackDuration > 0.0f)
+        {
+            knockbackDuration -= Time.fixedDeltaTime;
+        }
+    }
+
+    public void ApplyKnockback(Transform Other, float power, float duration)
+    {
+        knockbackDuration = duration;
+        knockback = -(Other.position - transform.position).normalized * power;
     }
 
     private void ApplyMovement(Vector2 direction)
     {
         direction = direction * characterStatsHandler.CurrentStat.speed;
+
+        if(knockbackDuration > 0.0f)
+        {
+            direction += knockback;
+        }
+
         movementRigidbody.velocity = direction;
     }
 }
